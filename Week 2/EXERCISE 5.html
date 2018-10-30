@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://clab.concordia.ca/wp-content/uploads/2018/09/TEMPLATE_EX_1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title> EXERCISE 5 </title>
+
+  <!--CSS-->
+  <style>
+  #c {
+      background-color: #3e181b;
+      border: 3px solid #db1d2d;}
+
+  #d {
+      background-color: #422018;
+      border: 3px solid #f0421c;}
+
+  #e {
+      background-color: #45391b;
+      border: 3px solid #fec02d;}
+
+  body{
+        background:black;
+
+      }
+  .para {
+    color:white;
+    font-size:22pt;
+    background:purple;
+    margin-left: 1%;
+    margin-top: 1%;
+    padding:1%;
+
+  }
+
+  .box {
+      width: 10vw; /*(1/10th) viewport width */
+      height: 10vw;
+      margin-left: 1%;
+      margin-top: 1%;
+      display:inline-block;
+      /*the box seems to be where the text appears*/
+
+    }
+  .wrapper{
+    margin-left:30%;
+    margin-top:15%;
+
+  }
+  </style>
+
+
+
+  <!--Javascript-->
+  <script>
+
+    window.onload = function(){
+    console.log("testing");
+     //on load
+
+//Text Array
+let textArray = ['This is the text for box C', 'This is the text for box D', 'This is the text for box E']
+
+
+//Text Appear Callback
+    function boxFunction() {
+        document.getElementById("displayText").style.display = "inline-block";
+        document.getElementById("displayText").innerHTML = textArray[0];
+    }
+    let cBox = document.getElementById( 'c'); //this can only call one id at a time
+    cBox.addEventListener('click', boxFunction);
+
+    let dBox = document.getElementById( 'd'); //this can only call one id at a time
+    dBox.addEventListener('click', boxFunction);
+
+    let eBox = document.getElementById( 'e'); //this can only call one id at a time
+    eBox.addEventListener('click', boxFunction);
+
+
+
+//Text Dissapear Callback
+function textFunction(){
+  document.getElementById('displayText').style.display = "none";
+}
+
+let textBox = document.getElementById('displayText');
+textBox.addEventListener('click', textFunction);
+
+
+
+}
+
+  </script>
+
+  <!--Actual HTML-->
+</head>
+<body>
+  <div class="wrapper">
+  <div id="c" class="box"> </div>
+  <div id="d" class="box"></div>
+  <div id="e" class="box"></div>
+  <br>
+  <p style="display:none;" id="displayText" class="para"></p>
+</div>
+
+
+
+</body></html>

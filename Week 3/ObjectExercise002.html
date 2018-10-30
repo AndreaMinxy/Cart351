@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title> Canvas Tutorial </title>
+  <style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  canvas{
+    background:black;
+    margin:0;
+    padding:0;
+  }
+  </style>
+  <script>
+  /*** THIS EX SHOWS THE BASIC SETUP ****/
+  //only run this once the window loads
+  window.onload = function(){
+// step 1 access the canvas element && the graphics context....
+let canvas = document.getElementById('testCanvas');
+let canvasContext = canvas.getContext('2d');
+// create an "instance"
+let ellipse1 = new interactiveEllipse(canvas.width/2,canvas.height/2,30,"#ffff33");
+let ellipse2 = new interactiveEllipse(canvas.width/3, canvas.height/3, 30, "#ff66ff");
+let ellipse3 = new interactiveEllipse(canvas.width/1.5, canvas.height/3, 30, "#ff66ff");
+let ellipse4 = new interactiveEllipse(canvas.width/3, canvas.height/1.5, 30, "#ff66ff");
+let ellipse5 = new interactiveEllipse(canvas.width/1.5, canvas.height/1.5, 30, "#ff66ff");
+
+
+//invoke the render function
+ellipse1.styleUp();
+ellipse2.styleUp();
+ellipse3.styleUp();
+ellipse4.styleUp();
+ellipse5.styleUp();
+
+function interactiveEllipse(x,y,r,c){
+  //member variables
+  this.xPos = x;
+  this.yPos = y;
+  this.radius = r;
+  this.ellipseColor = c;
+
+//member function
+//WHAT THE HELL DOES THIS ENTIRE BLOCK OF CODE MEAN???? HOW AM I SUPPOSED TO READ IT???
+//IS THIS SUPPOSED TO DRAW THE OBJECT?? WHAT THE HELL IS THIS??
+  this.styleUp =function(){
+      canvasContext.fillStyle = this.ellipseColor;// change the color we are using
+      canvasContext.beginPath();
+      canvasContext.arc(this.xPos,this.yPos,this.radius,0, Math.PI * 2, true);
+      canvasContext.fill(); // set the fill
+      canvasContext.closePath(); //close a path ...
+    }
+  } //end myRunningEllipse
+
+  //Color change Callback
+      function colorChange() {
+        //console.log(this.id);
+          document.getElementById("center").style.background = "white";
+
+      }
+
+  let centerCircle = document.getElementById("center");
+  centerCircle.addEventListener('click', colorChange);
+}//end window onload
+  </script>
+</head>
+<body>
+<canvas id="testCanvas" width="500" height="500">
+
+</canvas>
+
+<div id="center"> </div>
+</body>
+</html>

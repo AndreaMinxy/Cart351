@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title> Canvas Tutorial </title>
+  <style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  canvas
+  {
+    background:black;
+    margin:0;
+    padding:0;
+  }
+  </style>
+  <script>
+  /*** THIS EX SHOWS THE BASIC SETUP ****/
+  //only run this once the window loads
+  window.onload = function(){
+// step 1 access the canvas element && the graphics context....
+
+let aPerson = new Person("Andrea","purple");
+aPerson.display();
+function Person(name, favouriteColor){
+
+  this.personName = name;
+  this.personFavoriteColor = favouriteColor;
+  this.display= function(){
+    document.write(`Person Name: ${this.personName} Color: ${this.personFavoriteColor}`)
+  }
+
+}
+
+  }//end window onload
+  </script>
+</head>
+<body>
+
+
+</canvas>
+</body>
+</html>

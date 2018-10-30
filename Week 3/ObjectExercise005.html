@@ -1,0 +1,161 @@
+<html>
+<head>
+  <title> Canvas Tutorial </title>
+  <style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  canvas{
+    background:black;
+    margin:0;
+    padding:0;
+  }
+
+  #dot{
+    margin: 10% 30% 20% 10%;
+        height: 25px;
+        width: 25px;
+        background-color: yellow;
+        border-radius: 50%;
+        z-index: 2;
+        position: absolute;
+  }
+  </style>
+  <script>
+
+window.onload = function(){ //1
+// step 1 access the canvas element && the graphics context....
+let canvas = document.getElementById('testCanvas');
+let canvasContext = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+//create a boolean
+let isCircleClicked = false;
+
+// max number ellipses
+const MAX_ELLIPSES =5;
+//array to hold objects
+let myEllipses = [];
+//make some possible colors
+let colors = ["#8ED6FF","#c379e5","#e22626","#61f495","#4953c1"];
+
+//fill the array with objects
+for (let i =0; i< MAX_ELLIPSES;i++){ //2
+// have different parameters for each ellipse object
+//we are pushing new Ellipses to the end of the array
+//still not sure what the modulo is for
+  myEllipses.push(new interactiveEllipse(i,i,10,colors[i%colors.length],(i%5)+1,(i%6)+2));
+} //2
+
+//Color change Callback
+    function colorChange() {
+      //console.log(this.id);
+        document.getElementById("dot").style.background = "white";
+        isCircleClicked= true;
+
+
+    }
+
+let centerCircle = document.getElementById("dot");
+centerCircle.addEventListener('click', colorChange);
+
+
+
+requestAnimationFrame(runAni);
+
+// this is our callback function (to simulate a loop ... )
+function runAni(){ //3
+  //need to reset the background :)
+  // clear the canvas ...
+  canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+
+  // go through each object and perform required ops
+  for (let i =0; i< MAX_ELLIPSES;i++){ //4
+    if(isCircleClicked===true){
+      myEllipses[i].update();
+      myEllipses[i].styleUp();
+
+    }
+      else{
+        myEllipses[i].update();
+        myEllipses[i].styleDown();
+      }
+  } //4
+  // recursive call ...
+  requestAnimationFrame(runAni);
+} //3
+
+
+function interactiveEllipse(x,y,r,c, xSpeed, ySpeed){ //5
+  //member variables
+  this.xPos = x;
+  this.yPos = y;
+  this.radius = r;
+  this.ellipseColor = c;
+  // new for updating
+  this.xSpeed = xSpeed;
+  this.ySpeed =ySpeed;
+
+//member function
+//WHAT THE HELL DOES THIS ENTIRE BLOCK OF CODE MEAN???? HOW AM I SUPPOSED TO READ IT???
+//IS THIS SUPPOSED TO DRAW THE OBJECT?? WHAT THE HELL IS THIS??
+  this.styleUp =function(){ //6
+      canvasContext.fillStyle = this.ellipseColor;// change the color we are using
+      canvasContext.beginPath();
+      canvasContext.arc(this.xPos,this.yPos,this.radius,0, Math.PI * 2, true);
+      canvasContext.fill(); // set the fill
+      canvasContext.closePath(); //close a path ...
+    } //6
+
+
+  //member function for updating
+  this.update = function(){ //7
+       if(this.xPos<0 || this.xPos>canvas.width){ //8
+         this.xSpeed*=-1;
+       } //8
+       if(this.yPos<0 || this.yPos>canvas.height){ //9
+         this.ySpeed*=-1;
+       } //9
+       this.xPos+=this.xSpeed;
+       this.yPos+=this.ySpeed;
+     } //7
+
+     this.styleDown =function(){ //6
+         canvasContext.fillStyle = "white";// change the color we are using
+         canvasContext.beginPath();
+         canvasContext.arc(this.xPos,this.yPos,this.radius,0, Math.PI * 2, true);
+         canvasContext.fill(); // set the fill
+         canvasContext.closePath(); //close a path ...
+       } //6
+
+   } //end myEllipseObject //5
+
+     }//window onload
+
+     window.onresize = function(){
+       let canvas = document.getElementById("testCanvas");
+       canvas.width = window.innerWidth;
+       canvas.height = window.innerHeight;
+     }
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</head>
+<body>
+  <div id="dot"> </div>
+<canvas id="testCanvas" width="500" height="500">
+
+
+</body>
+</html>
