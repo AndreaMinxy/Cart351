@@ -1,0 +1,52 @@
+<html>
+<head>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: black;
+  }
+
+  canvas {
+    margin: 0;
+    padding: 0;
+    background: black;
+  }
+  </style>
+
+  <script>
+
+  window.onload = function(){
+// step 1 access the canvas element && the graphics context....
+let canvas = document.getElementById('Canvas');
+let canvasContext = canvas.getContext('2d');
+
+let ellipse1 = new myGrowingPool(canvas.width/2,canvas.height/2,30,"#8ED6FF");
+
+//invoke the render function
+ellipse1.update();
+
+//create Object and arguments
+function myGrowingPool (x, y, r, c){
+  //member variables
+  this.xPos = x;
+  this.yPos = y;
+  this.radius = r;
+  this.ellipseColor = c;
+
+  this.update = function(){
+    canvasContext.fillStyle = this.ellipseColor;// change the color we are using
+    canvasContext.beginPath();
+    canvasContext.arc(this.xPos,this.yPos,this.radius,0, Math.PI * 2, true);
+    canvasContext.fill(); // set the fill
+    canvasContext.closePath(); //close a path ...
+  }//end of Update
+}// end of function myGrowingPool
+}//end of window onload
+  </script>
+</head>
+
+<body>
+<canvas id="Canvas" width="500" height="500">
+<body>
+<html>
