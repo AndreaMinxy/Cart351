@@ -1,0 +1,30 @@
+{
+  "Label": "Food of the Day",
+  "SubLabel":"What did Andrea Eat Today?",
+  "FoodItems":
+  [
+    { "Day": "monday",
+      "Title": "Guacamole",
+      "Ingredients": "Ingredients: Avocado, Tomato, Garlic, Onion, Cilantro, Lime Juice, Salt",
+      "Deliciousness": "Rating: 10/10"
+    },
+
+    { "Day": "tuesday",
+      "Title": "A&W",
+      "Ingredients": "Ingredients: Meat, Onions, Pickles, Mayo",
+      "Deliciousness": "Rating: 10/10"
+    },
+
+    { "Day": "wednesday",
+      "Title": "Spaghetti",
+      "Ingredients": "Ingredients: Tomato Sauce, Tomato Paste, Fresh Basil, Mushrooms, Peppers",
+      "Deliciousness": "Rating: 10/10"
+    },
+
+    { "Day": "thursday",
+      "Title": "Breafast Tacos",
+      "Ingredients": "Ingredients: Flour Tortilla, Sausage, Scrambled Egg, Avocado, Tomato",
+      "Deliciousness": "Rating: 10/10"
+    }
+  ]
+}

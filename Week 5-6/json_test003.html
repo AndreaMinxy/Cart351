@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <title> Andrea Eats </title>
+    <script src = "jquery/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      let header = $('header');
+      let section = $('section');
+      let loaded=false;
+
+      $("#getData").click(function(event){
+        if(loaded ===false){
+             console.log("clicked");
+             $.getJSON('food.json',function(data) {
+             //success
+               //step 1: console.log the result
+               console.log(data);
+               //set boolean to true
+             //  loaded=true;
+               //step 2: display header on html page
+              populateHeader(data);
+               //step 3: display the food ....
+             showFood(data);
+             })
+             //fail
+             .fail(function() {
+               console.log( "error" );
+             });
+           }
+           else{
+             console.log("data was loaded");
+           }
+       });
+       function populateHeader(data){
+         let sampleHeader = $("<h1>");
+         $(sampleHeader).text(data.Label);
+         $(sampleHeader).appendTo(header);
+
+
+         let samplePara = $("<p>");
+         console.log(data.SubLabel);
+         $(samplePara).text(data.SubLabel);
+         $(samplePara).appendTo(header);
+
+       }
+
+
+       function showFood(data){
+       // our array of each book objects
+       let food = data['FoodItems'];
+
+       for (var i = 0; i < food.length; i++) {
+         let sampleFoodArticle = $('<article>');
+         let sampleFoodH2 = $("<h1>");
+         let samplePara1 = $("<p>");
+         let samplePara2 = $("<p>");
+         //let sampleImage= $("<img>");
+
+
+         $(sampleFoodH2).text(food[i].Title);
+         $(samplePara1).text(food[i].Ingredients);
+         $(samplePara2).text(food[i].Deliciousness);
+         //$(sampelImage).attr("src", books[i].i)
+
+
+         $(sampleFoodH2).appendTo(sampleFoodArticle);
+         $(samplePara1).appendTo(sampleFoodArticle);
+         $(samplePara2).appendTo(sampleFoodArticle);
+
+         $(section).append(sampleFoodArticle);
+       } //books
+     }//function
+
+
+    });
+    </script>
+  </head>
+
+  <style media="screen">
+
+    body{
+
+    }
+
+    h1{
+      text-align: center;
+      color: pink;
+      font-family: 'Libre Baskerville', serif;
+    }
+  </style>
+
+
+  <body>
+      <h1> Andrea Eats </h1>
+
+      <input type="text" id="searchData" value= "Day">
+      <input type="button" id="getData" value="Load Data" />
+
+
+    <header>
+
+    </header>
+
+    <section>
+
+    </section>
+  </body>
+</html>
