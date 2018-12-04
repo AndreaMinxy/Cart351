@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Feminist Propaganda</title>
+  <script src = "libs/jquery-3.3.1.min.js"></script>
+  <script src = "libs/readfile.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!--end of head-->
+<style media="screen">
+
+  html{
+    background-color: pink;
+  }
+</style>
+
+<body>
+<form id = "test" action ="">
+<input type="radio" name="gender" value="male" id="Male"> Male
+<input type="radio" name="gender" value="female" id="Female"> Female
+<input type="radio" name="gender" value="other" id="Other"> Other
+
+<button id = "buttonS">Submit</button>
+</form>
+
+
+<script>
+
+window.onload = function(){
+//console.log("testing");
+ //on load
+
+//document.getElementById('test').onsubmit = function() {
+document.getElementById('buttonS').addEventListener("click", function(){
+  event.preventDefault();
+  console.log("test");
+    // this (keyword) refers to form to which onsubmit attached
+    // 'ship' is name of radio button group
+    let val = getRadioVal(document.getElementById('test'), 'gender');
+    let male = document.getElementById("Male");
+  //  alert(val);
+    console.log(val);
+    // more code here ...
+    //how do I assign the choices for my if statement?
+    if(male){
+      colourChangeOne();
+    } else{
+      colourChangeTwo();
+
+    }
+});
+
+//create a function to affect the output of the submition
+
+function colourChangeOne(){
+document.getElementsByTagName("html")[0].style.background = "blue";
+}
+
+function colourChangeTwo(){
+document.getElementsByTagName("html")[0].style.background = "yellow";
+}
+}
+
+
+</script>
+
+</body>
+</html>

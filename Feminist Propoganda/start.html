@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Pathway+Gothic+One|Nanum+Gothic" rel="stylesheet">
+    <script src = "libs/jquery-3.3.1.min.js"></script>
+    <script src = "libs/readfile.js"></script>
+    <link rel="stylesheet" href="question/css/startStyle.css">
+    <title>Feminist Propaganda</title>
+  </head>
+  <body>
+<div class="screen">
+  <button id = "buttonS">Start Quiz</button>
+</div>
+<script>
+
+window.onload = function(){
+//console.log("testing");
+ //on load
+
+//document.getElementById('test').onsubmit = function() {
+document.getElementById('buttonS').addEventListener("click", function(){
+  event.preventDefault();
+  console.log("test");
+  window.location.pathname= "q1.html";
+})
+}
+  </script>
+  </body>
+</html>

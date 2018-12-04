@@ -1,0 +1,42 @@
+html{
+  background-color: white;
+}
+
+h1, h2{
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+    color: #ff3385;
+
+}
+
+h1{
+  font-size: 60px;
+
+}
+
+p{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+}
+
+
+
+.list{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+}
+
+form{
+  align-items: center;
+  background-color: yellow;
+  border-style: solid;
+  border-color: black;
+  margin-right: 500px;
+  text-decoration: none;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+}
+
+button{
+  text-decoration: none;
+}

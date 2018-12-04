@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Feminist Propaganda</title>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron|Pathway+Gothic+One" rel="stylesheet">
+  <script src = "libs/jquery-3.3.1.min.js"></script>
+  <script src = "libs/readfile.js"></script>
+  <link rel="stylesheet" href="css/style002.css">
+</head>
+<!--end of head-->
+
+<body>
+  <div class="glitch">
+
+
+<!--do I need to put another div here to make the question clickable?-->
+</div>
+<p> Oh shit we don't have a colour for you</p>
+
+<form id = "test" action ="">
+<!--input type="radio" name="gender" value="male" id="Male"-->
+<p>Why would I need a colour?</p>
+<!--input type="radio" name="gender" value="female" id="Female">
+<input type="radio" name="gender" value="other" id="Other"-->
+
+
+<button id = "buttonS"> Submit</button>
+
+
+</form>
+
+<div id="text2" style="display: none;">
+<p>Because...um...well...</p>
+<button id="return" onclick="returnPage"> Continue </button>
+</div>
+
+
+
+<script>
+
+window.onload = function(){
+//console.log("testing");
+ //on load
+
+//document.getElementById('test').onsubmit = function() {
+document.getElementById('buttonS').addEventListener("click", function(){
+  event.preventDefault();
+  console.log("test");
+  showText();
+});
+
+document.getElementById('return').addEventListener("click", function(){
+  event.preventDefault();
+  console.log("return");
+  returnPage();
+});
+
+//create a function to affect the output of the submition
+
+function showText(){
+  let x = document.getElementById("text2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function returnPage(){
+  window.location.pathname= "question/q3.html";
+}
+
+}
+
+</script>
+
+</body>
+</html>

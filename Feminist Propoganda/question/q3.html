@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Feminist Propaganda</title>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron|Pathway+Gothic+One" rel="stylesheet">
+  <script src = "libs/jquery-3.3.1.min.js"></script>
+  <script src = "libs/readfile.js"></script>
+  <link rel="stylesheet" href="css/style001.css">
+</head>
+<!--end of head-->
+
+<body>
+  <h1> Some Bullshit Quiz</h1>
+
+
+  <p>What's your favourite thing to do?</p>
+
+<form id = "test" action ="">
+<input type="radio" name="gender" value="male" id="Male"> Shop!
+<input type="radio" name="gender" value="female" id="Female"> Shave my legs!
+<input type="radio" name="gender" value="other" id="Other"> Listen to the men in my life complain about how the world is so against men now!
+
+
+<button id = "buttonS">Submit</button>
+</form>
+
+
+<script>
+
+window.onload = function(){
+//console.log("testing");
+ //on load
+
+//document.getElementById('test').onsubmit = function() {
+document.getElementById('buttonS').addEventListener("click", function(){
+  event.preventDefault();
+  console.log("test");
+    // this (keyword) refers to form to which onsubmit attached
+    // 'ship' is name of radio button group
+    let val = getRadioVal(document.getElementById('test'), 'gender');
+    //let male = getRadioVal(document.getElementById('Male'), 'gender');
+  //  alert(val);
+    console.log(val);
+    // more code here ...
+    //how do I assign the choices for my if statement?
+    //how do I link new html pages for the ouput?
+    if(val ==="male"){
+      colourChangeOne();
+    } else if(val === "female"){
+      colourChangeTwo();
+    }
+    else{
+      colourChangeThree();
+    }
+});
+
+//create a function to affect the output of the submition
+
+function colourChangeOne(){
+document.getElementsByTagName("html")[0].style.background = "blue";
+// Sets the new href (URL) for the current window.
+//window.location.href = "http://www.google.ca";
+window.open('question/q2.html', '_blank');
+}
+
+function colourChangeTwo(){
+document.getElementsByTagName("html")[0].style.background = "yellow";
+}
+
+function colourChangeThree(){
+document.getElementsByTagName("html")[0].style.background = "red";
+}
+
+}
+
+</script>
+
+</body>
+</html>
