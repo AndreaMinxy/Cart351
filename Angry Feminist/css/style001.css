@@ -1,0 +1,188 @@
+html{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+h1,h2{
+  margin: 0;
+  padding: 100px 0 0 0;
+  font-family: 'Abel', Arial, sans-serif;
+  text-align: center;
+  color: #d9d9d9;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  //border-style: solid;
+  //border-color: yellow;
+
+}
+#background {
+margin: 0;
+padding: 0;
+position: relative;
+background: url(background2.png);
+background-size: cover;
+height: 100%;
+//border-style: solid;
+//border-color: red;
+
+}
+
+#slutBackground{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: black;
+  background: url(slut.png);
+  background-size: cover;
+  height: 100%;
+  //border-style: solid;
+  //border-color: red;
+}
+
+#bitchBackground{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: black;
+  background: url(bitch.png);
+  background-size: cover;
+  height: 100%;
+  //border-style: solid;
+  //border-color: red;
+}
+
+#girlyBackground{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: black;
+  background: url(girly.png);
+  background-size: cover;
+  height: 100%;
+  //border-style: solid;
+  //border-color: red;
+}
+
+#uglyBackground{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: black;
+  background: url(ugly.png);
+  background-size: cover;
+  height: 100%;
+  //border-style: solid;
+  //border-color: red;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+
+}
+.list{
+  width: 5%;
+
+}
+li:hover{
+  opacity: 0.5;
+}
+
+li{
+  list-style-type: none;
+  margin-left: 600px;
+  padding: 75px 0 75px 0;
+  font-family: 'Muli', sans-serif;
+  font-size: 25px;
+  color: #d9d9d9;
+}
+button{
+    background-color: #333333; /* Green */
+    border-style: solid;
+    border-color: white;
+    color: white;
+    margin-left: 600px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover{
+  background-color: #d9d9d9;
+}
+
+#buttonS{
+  background-color: #333333;
+  color: white;
+  margin: 300px 0 0 46%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  //border-style: solid;
+  //border-color: red;
+}
+
+#buttonB{
+  background-color: black;
+  color: white;
+  margin: 200px 0 0 575px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#buttonU{
+  background-color: #333333; /* Green */
+  color: white;
+  margin: 200px 0 0px 575px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#buttonG{
+  background-color: #333333; /* Green */
+  color: white;
+  margin: 175px 0 0 575px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.fade{
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  text-align: center;
+  font-family: 'Abel', Arial, sans-serif;
+  font-size: 20px;
+  //border-style: solid;
+  //border-color: black;
+
+}
+
+.fade img{
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.fixed{
+  height: 50%;
+  border-style: solid;
+  border-color: pink;
+}

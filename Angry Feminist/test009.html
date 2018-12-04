@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Muli|Open+Sans+Condensed:300" rel="stylesheet">
+    <title>Feminist Bitch</title>
+    <script src = "libs/jquery-3.3.1.min.js"></script>
+    <script src = "libs/readfile.js"></script>
+    <link rel="stylesheet" href="css/style001.css">
+  </head>
+  <body id="background2">
+    <div id="background" style="display: none;">
+    <ul>
+      <div class="list">
+        <div id="slut">
+          <li>Slut</li>
+        </div>
+        <div id="bitch">
+          <li>Bitch</li>
+        </div>
+        <div id="ugly">
+          <li>Ugly</li>
+        </div>
+        <div id="girly">
+          <li style="color: black;">Girly</li>
+        </div>
+      </div>
+    </ul>
+</div>
+
+
+  <div id="slutBackground" style="display:none;">
+
+  <div id="clothing1" class="fade"  data-att ="in" style="display:inline-block; opacity:0;padding: 50px 0 0 0;"> <p> "What was she wearing"</p> </div>
+  <div id="legs" class="fade"  data-att ="in" style="display:inline-block; opacity:0; padding: 0 0 0 700px;">  <img src="css/legs.png"> </div>
+  <div id="clothing2"class="fade"  data-att ="in" style="display:inline-block; opacity:0; padding: 20px 0 0 200px;"> <p> "She was probably asking for it"</p> </div>
+ <div id="thigh" class="fade"  data-att ="in" style="display:inline-block; opacity:0; padding: 0 700px 0 0;">  <img src="css/thigh.png"> </div>
+  <div id="clothing3"class="fade"  data-att ="in" style="display:inline-block; opacity:0;padding: 0 0 0 700px;"> <p> "Was she drinking?""</p> </div>
+  <div id="clothing4" class="fade"  data-att ="in" style="display:inline-block; opacity:0; padding: 0px 0 0 0px;"> <p> "What was she thinking, going to a party alone"</p> </div>
+  <div id="fem" class="fade"  data-att ="in" style="display:inline-block; opacity:0; padding: 0 50px 0 0;">  <img src="css/nafi.png"> </div>
+  <div id="clothing5"class="fade"  data-att ="in" style="display:inline-block; opacity:0; padding: 0px 0px 0px 500px;"> <p> "He must be so embarassed of her"</p> </div>
+<div id="buttonS" style="display:none"> home </div>
+
+  </div>
+
+  <div id="bitchBackground" style="display:none;">
+  <div id="bitch1" class="fade" data-att ="in" style="display:block; opacity:0; color: white; margin: 0 0 0 500px;"> <p> "Wow, she is so agressive!""</p> </div>
+  <div id="bitch2" class="fade" data-att ="in" style="display:block; opacity:0; color: white; margin: 100px 0 0 200px"> <p> "I bet she puts her work before her family" </p> </div>
+  <div id="bitch3" class="fade" data-att ="in" style="display:block; opacity:0; color: white; margin: 0 0 0 800px;"> <p> "Is she on her period? So emotional" </p> </div>
+  <div id="bitch4" class="fade" data-att ="in" style="display:block; opacity:0; color: white; margin: 0px 0 0 0px;"> <p> "Is she capable of leading a team?""</p> </div>
+  <div id="bitch5" class="fade" data-att ="in" style="display:block; opacity:0; color: white; margin: 100px 0px 0px 500px;"> <p> "They probably just hired her for 'diversity'</p> </div>
+
+  <div id="buttonB" style="display:none;"> home </div>
+  </div>
+
+  <div id="uglyBackground" style="display:none;">
+  <div id="ugly1" class="fade" data-att ="in" style="display:block; opacity:0; margin: 0 0 0 500px;"> <p> "She's so fat! She should work out more"</p> </div>
+  <div id="ugly2" class="fade" data-att ="in" style="display:block; opacity:0; margin: 100px 0 0 200px"> <p> "She's too skinny! She should eat more"</p> </div>
+  <div id="ugly3" class="fade" data-att ="in" style="display:block; opacity:0; margin: 0 0 0 800px;"> <p> "She would look so much prettier if only..."" </p> </div>
+  <div id="ugly4" class="fade" data-att ="in" style="display:block; opacity:0; margin: 0px 0 0 0px;"> <p> "Those clothes don't suit your body type"</p> </div>
+  <div id="ugly5" class="fade" data-att ="in" style="display:block; opacity:0; margin: 100px 0px 0px 500px;"> <p> "You don't wear enough makeup"</p> </div>
+  <div id="ugly6" class="fade" data-att ="in" style="display:block; opacity:0; margin: 0 0px 0px 100px"> <p> "You wear too much makeup"</p> </div>
+  <div id="buttonU" style="display:none;"> home </div>
+  </div>
+
+  <div id="girlyBackground" style="display:none;">
+  <div id="girly1" class="fade" data-att ="in" style="display:block; opacity:0; margin: 0 0 0 500px;"> <p> "Ugh, probably always needs a man's help" </p> </div>
+  <div id="girly2" class="fade" data-att ="in" style="display:block; opacity:0; margin: 100px 0 0 200px"> <p> "Damn babymaker" </p> </div>
+  <div id="girly3" class="fade" data-att ="in" style="display:block; opacity:0; margin: 0 0 0 800px;"> <p> "Doesn't she know femininity is part of the patriarchy?"" </p> </div>
+  <div id="girly4" class="fade" data-att ="in" style="display:block; opacity:0; margin: 0px 0 0 0px;"> <p> "She isn't strong and indipendent enough"</p> </div>
+  <div id="girly5" class="fade" data-att ="in" style="display:block; opacity:0; margin: 100px 0px 0px 500px"> <p> "Does she care about anything else besides herself?""</p> </div>
+  <div id="buttonG" style="display:none;"> home </div>
+  </div>
+</div>
+
+
+
+
+    <script>
+    window.onload =function(){
+      $("#background").fadeIn(3000);
+
+     $(".fade").on("mouseover", function() {
+        console.log($(this));
+        if($(this).attr("data-att") ==="in"){
+          $(this).fadeTo( "slow", 1.0,function() {
+          console.log($(this).attr("data-att","out"));
+        });
+     }
+
+     if($(this).attr("data-att") ==="out"){
+       $(this).fadeTo( "slow", 0.0,function() {
+       console.log($(this).attr("data-att","in"));
+     });
+  }
+   });
+
+      // else{
+      //   console.log($(this));
+      //   $(this).fadeTo( "slow", 0.0);
+      // })
+
+      //$(".fade").on("mouseover", function(){
+         //console.log($(this));
+         //$(this).fadeTo( "slow", 1.0);
+
+      //})
+
+   //slut
+    document.getElementById('slut').addEventListener("mouseover", function(){
+    event.preventDefault();
+    console.log("slut");
+    $("#background").fadeOut(3000,fadeInOther);
+    function fadeInOther(){
+    $("#slutBackground").fadeIn(6000);
+    $("#buttonS").fadeIn(6000);
+    //$("#clothing1").fadeIn(6000);
+    //$("#clothing2").fadeIn(6000);
+    //$("#clothing3").fadeIn(6000);
+    //$("#clothing4").fadeIn(6000);
+    //$("#clothing5").fadeIn(6000);
+
+
+
+     }
+    //document.getElementById("background").setAttribute("style","opacity:0;");
+  });
+  document.getElementById('buttonS').addEventListener("click", function(){
+    event.preventDefault();
+    console.log("clickS");
+    newPage();
+    });
+
+  //bitch
+    document.getElementById('bitch').addEventListener("mouseover", function(){
+    event.preventDefault();
+    console.log("bitch");
+    $("#background").fadeOut(3000,fadeInOther);
+    function fadeInOther(){
+    $("#bitchBackground").fadeIn(6000);
+    $("#buttonB").fadeIn(6000);
+    // $("#bitch1").fadeIn(6000);
+    // $("#bitch2").fadeIn(6000);
+    // $("#bitch3").fadeIn(6000);
+    // $("#bitch4").fadeIn(6000);
+    // $("#bitch5").fadeIn(6000);
+     }
+  });
+  document.getElementById('buttonB').addEventListener("click", function(){
+    event.preventDefault();
+    console.log("clickB");
+    newPage();
+    });
+
+  //ugly
+    document.getElementById('ugly').addEventListener("mouseover", function(){
+    event.preventDefault();
+    console.log("ugly");
+    $("#background").fadeOut(3000,fadeInOther);
+    function fadeInOther(){
+    $("#uglyBackground").fadeIn(6000);
+    $("#buttonU").fadeIn(6000);
+    // $("#ugly1").fadeIn(6000);
+    // $("#ugly2").fadeIn(6000);
+    // $("#ugly3").fadeIn(6000);
+    // $("#ugly4").fadeIn(6000);
+    // $("#ugly5").fadeIn(6000);
+    // $("#ugly6").fadeIn(6000);
+     }
+  });
+  document.getElementById('buttonU').addEventListener("click", function(){
+    event.preventDefault();
+    console.log("clickU");
+    newPage();
+    });
+
+  //girly
+    document.getElementById('girly').addEventListener("mouseover", function(){
+    event.preventDefault();
+    console.log("girly");
+    $("#background").fadeOut(3000,fadeInOther);
+    function fadeInOther(){
+    $("#girlyBackground").fadeIn(6000);
+    $("#buttonG").fadeIn(6000);
+    // $("#girly1").fadeIn(6000);
+    // $("#girly2").fadeIn(6000);
+    // $("#girly3").fadeIn(6000);
+    // $("#girly4").fadeIn(6000);
+    // $("#girly5").fadeIn(6000);
+     }
+  });
+  document.getElementById('buttonG').addEventListener("click", function(){
+    event.preventDefault();
+    console.log("clickG");
+    newPage();
+    });
+
+//redirect
+    function newPage(){
+      window.location.pathname= "test009.html";
+    }
+}
+
+    </script>
+</body>
+</html>

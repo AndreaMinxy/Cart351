@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Muli|Open+Sans+Condensed:300|Abel" rel="stylesheet">
+    <title>Feminist Bitch</title>
+    <script src = "libs/jquery-3.3.1.min.js"></script>
+    <script src = "libs/readfile.js"></script>
+    <link rel="stylesheet" href="css/style001.css">
+    <link rel="stylesheet" href="css/webfontkit-dripping/stylesheet.css" type="text/css" charset="utf-8" />
+
+  </head>
+  <body>
+<div id="background" style="display: none;">
+  <h1 style="font-size: 150px;"> Angry Feminist</h1>
+  <h2 style="font-size: 50px;"> An Interactive Word Collage </h2>
+
+
+
+<button type="button" id="buttonT"> Start </button>
+
+</div>
+
+
+
+    <script type="text/javascript">
+
+      window.onload = function(){
+        $("#background").fadeIn(3000);
+
+
+//document.getElementById('test').onsubmit = function() {
+document.getElementById('buttonT').addEventListener("click", function(){
+  event.preventDefault();
+  console.log("start");
+  newPage();
+  });
+
+  function newPage(){
+    window.location.pathname= "test0010.html";
+  }
+}
+  </script>
+  </body>
+</html>

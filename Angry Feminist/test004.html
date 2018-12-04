@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Muli" rel="stylesheet">
+    <title>Feminist Bitch</title>
+    <script src = "libs/jquery-3.3.1.min.js"></script>
+    <script src = "libs/readfile.js"></script>
+    <link rel="stylesheet" href="css/style001.css">
+  </head>
+  <body id="background2">
+    <div id="background" style="display: none;">
+    <ul>
+      <div class="list">
+        <div id="slut">
+          <li>Slut</li>
+        </div>
+        <div id="bitch">
+          <li>Bitch</li>
+        </div>
+        <div id="ugly">
+          <li>Ugly</li>
+        </div>
+        <div id="girly">
+          <li>Girly</li>
+        </div>
+        <div id="dyke">
+          <li>Dyke</li>
+        </div>
+      </div>
+    </ul>
+</div>
+<div id="pink" style="display:none;">
+
+</div>
+    <script>
+    window.onload =function(){
+      $("#background").fadeIn(3000);
+
+    document.getElementById('slut').addEventListener("mouseover", function(){
+    event.preventDefault();
+    console.log("slut");
+    $("#background").fadeOut(3000,fadeInOther);
+    function fadeInOther(){
+    $("#pink").fadeIn(6000);
+     }
+    //document.getElementById("background").setAttribute("style","opacity:0;");
+  });
+    document.getElementById('bitch').addEventListener("mouseover", function(){
+    event.preventDefault();
+    console.log("bitch");
+    $("#background").fadeOut(3000,changePage);
+    function changePage(){
+      window.location.pathname= "start.html";
+    }
+  });
+    document.getElementById('ugly').addEventListener("mouseover", function(){
+    event.preventDefault();
+    console.log("ugly");
+    $("#background").fadeOut(3000);
+  });
+    document.getElementById('girly').addEventListener("mouseover", function(){
+    event.preventDefault();
+    console.log("girly");
+    $("#background").fadeOut(3000);
+  });
+    document.getElementById('dyke').addEventListener("mouseover", function(){
+    event.preventDefault();
+    console.log("dyke");
+    $("#background").fadeOut(3000);
+  });
+
+}
+
+    </script>
+</body>
+</html>

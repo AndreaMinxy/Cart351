@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title> Canvas Tutorial </title>
+  <style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  canvas
+  {
+    background:red;
+    margin:0;
+    padding:0;
+  }
+  </style>
+  <script>
+  /*** THIS EX SHOWS THE BASIC SETUP ****/
+  //only run this once the window loads
+  window.onload = function(){
+// step 1 access the canvas element && the graphics context....
+let canvas = document.getElementById('testCanvas');
+let canvasContext = canvas.getContext('2d');
+
+
+function myObject(x, y, w, h){
+
+  this.xPos = x;
+  this.yPos = y;
+  this.oWidth = w;
+  this.oHeight = h;
+
+  //member function
+  //make sure that this works with a rectangle and not an ellipse
+    this.render =function(){
+        canvasContext.fillStyle = this.ellipseColor;// change the color we are using
+        canvasContext.beginPath();
+        canvasContext.arc(this.xPos,this.yPos,this.radius,0, Math.PI * 2, true);
+        canvasContext.fill(); // set the fill
+        canvasContext.closePath(); //close a path ...
+      }
+    } //end myRunningEllipse
+
+  }//end window onload
+  </script>
+</head>
+<body>
+<canvas id="testCanvas" width="500" height="500">
+
+</canvas>
+</body>
+</html>
